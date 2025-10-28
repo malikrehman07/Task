@@ -24,7 +24,7 @@ const Login = () => {
         }
         setIsProcessing(true)
         try {
-            const res = await axios.post("http://localhost:8000/auth/login", { email, password })
+            const res = await axios.post("https://api-navy-eight-90.vercel.app/auth/login", { email, password })
             localStorage.setItem("token", res.data.token)
             console.log('token', res.data.token)
 
