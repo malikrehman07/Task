@@ -4,14 +4,14 @@ import Auth from './Auth'
 import Dashboard from './Dashboard'
 import ProtectedRoute from '../component/ProtectedRoute'
 import { useAuthContext } from '../context/Auth'
-import Home from './Home'
+import Frontend from './Frontend'
 
 const Index = () => {
     const {isAuth} = useAuthContext()
     return (
         <>
             <Routes>
-                <Route path='/' element={<Home/>} />
+                <Route path='/*' element={<Frontend/>} />
                 <Route path='/auth/*' element={!isAuth ? <Auth /> : <Navigate to='/dashboard' />} />
                 <Route path='/dashboard/*' element={<ProtectedRoute Component={Dashboard} />} />
             </Routes>

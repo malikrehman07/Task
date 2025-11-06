@@ -32,7 +32,7 @@ const Register = () => {
         let userData = { firstName, lastName, email, password }
         setIsProcessing(true)
         try {
-            const res = await axios.post("https://api-navy-eight-90.vercel.app/auth/register", userData)
+            const res = await axios.post("http://localhost:8000/auth/register", userData)
             const token = res.data.token;
 
             localStorage.setItem("token", token)
@@ -80,7 +80,7 @@ const Register = () => {
                         </Row>
                         <Row>
                             <Col span={24} >
-                                <Button type='primary' variant='solid' color='default' block loading={isProcessing} onClick={handleSubmit}  >Register</Button>
+                                <Button type='primary' variant='solid' color='default' block htmlType='submit' loading={isProcessing} onClick={handleSubmit}  >Register</Button>
                                 <Paragraph className='text-center my-1' >Already have an account?<Link to="/auth/login" >Login</Link></Paragraph>
                             </Col>
                         </Row>
