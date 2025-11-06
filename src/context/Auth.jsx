@@ -14,7 +14,8 @@ const AuthProvider = ({ children }) => {
             setIsAppLoading(false)
             return
         } try {
-            const res = await axios.get("http://localhost:8000/auth/user", {
+            // const res = await axios.get("http://localhost:8000/auth/user", {
+            const res = await axios.get("https://api-navy-eight-90.vercel.app/auth/user", {
                 headers: {
                     Authorization: `Bearer ${token} `
                 }

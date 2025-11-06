@@ -58,7 +58,8 @@ const Dashboard = () => {
         try {
             const token = localStorage.getItem("token");
             console.log("Token:", token);
-            const res = await axios.post("http://localhost:8000/compaigns/add", compaignData, {
+            // const res = await axios.post("http://localhost:8000/compaigns/add", compaignData, {
+            const res = await axios.post("https://api-navy-eight-90.vercel.app/compaigns/add", compaignData, {
                 headers: {
                     Authorization: `Bearer ${token}`, // ✅ Must be "Bearer <token>"
                 }

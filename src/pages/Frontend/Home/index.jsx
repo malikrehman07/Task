@@ -20,7 +20,8 @@ const Home = () => {
         try {
             const token = localStorage.getItem("token");
 
-            const res = await axios.get("http://localhost:8000/compaigns/read")
+            // const res = await axios.get("http://localhost:8000/compaigns/read")
+            const res = await axios.get("https://api-navy-eight-90.vercel.app/compaigns/read")
             setCompaigns(res.data.compaigns);
             console.log("compaigns", res.data);
 
