@@ -53,7 +53,7 @@ const Dashboard = () => {
         }
 
 
-        const compaignData = { compaignId, title, description, location, amount, night, imageUrls };
+        const compaignData = { uid: compaignId, title, description, location, amount, night, imageUrls };
 
         try {
             const token = localStorage.getItem("token");
