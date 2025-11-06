@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useCallback, useEffect } from 'react';
 import axios from 'axios'
-import { Button, Col, Progress, Row, Spin, Typography } from 'antd';
+import { Col, Row, Spin, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../../../context/Auth';
 
@@ -11,7 +11,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true)
     const navigate = useNavigate()
     const { user } = useAuthContext()
-    console.log("user", user);
+    // console.log("user", user);
 
 
 
@@ -23,7 +23,7 @@ const Home = () => {
             // const res = await axios.get("http://localhost:8000/compaigns/read")
             const res = await axios.get("https://api-navy-eight-90.vercel.app/compaigns/read")
             setCompaigns(res.data.compaigns);
-            console.log("compaigns", res.data);
+            // console.log("compaigns", res.data);
 
         } catch (error) {
             window.notify("Error fetching compaigns or donations", "error");

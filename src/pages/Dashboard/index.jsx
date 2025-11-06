@@ -3,7 +3,7 @@ import { Typography, Input, Button, Card, Form, Select, Upload, Row, Col } from 
 import { UploadOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import { useAuthContext } from '../../context/Auth';
-import { supabase } from '../../config/Supabase';
+import {supabase} from "../../config/supabase"
 const { Title } = Typography;
 const { Option } = Select;
 const { TextArea } = Input;
