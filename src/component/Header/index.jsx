@@ -19,7 +19,7 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link to="/" className="nav-link active" aria-current="page">Home</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link to="/compaigns" className="nav-link active" aria-current="page">Compaign</Link>
                             </li>
                             <li className="nav-item">
@@ -27,7 +27,7 @@ const Header = () => {
                             </li>
                             <li className="nav-item">
                                 <Link to="/contact" className="nav-link active" aria-current="page">Contact</Link>
-                            </li>
+                            </li> */}
                         </ul>
                         <div>
                             {!isAuth ?
