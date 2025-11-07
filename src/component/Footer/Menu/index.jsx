@@ -6,11 +6,11 @@ import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 const { Title, Paragraph } = Typography
 const Menu = () => {
   return (
-    <div className='container py-5'>
-      <Row gutter={[18, 18]} >
+    <div className='custom-container py-5'>
+      <Row gutter={[24, 24]} >
         <Col xs={12} sm={12} md={6} lg={6} >
           <Title  level={2} >Airbnb</Title>
-          <Paragraph style={{ fontSize: '17px' }} >Together with Give Hope Foundation, You Share Hope and Healing</Paragraph>
+          <Paragraph style={{ fontSize: '17px' }} >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, tempora.</Paragraph>
         </Col>
         <Col xs={12} sm={12} md={6} lg={6} >
           <Title level={4} >Useful Links</Title>

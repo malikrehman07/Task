@@ -36,7 +36,12 @@ const Home = () => {
     useEffect(() => { getCompaigns() }, [getCompaigns])
     if (loading) return <Spin size="large" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', }} />;
     return (
-        <main className="container py-5 ">
+        <main className="custom-container pt-4 ">
+            <Row>
+                <Col span={24} >
+                    <Title level={4} className="mb-4">Popular homes in Lahore</Title>
+                </Col>
+            </Row>
             <Row gutter={[18, 18]} justify="center" className=" text-start">
                 {compaigns.map((compaign) => {
                     return (
@@ -45,7 +50,7 @@ const Home = () => {
                                 <div style={{ cursor: 'pointer' }} onClick={() => navigate(`/compaign/${compaign._id}`)} >
                                     <img src={compaign.imageUrls?.[0]} alt={compaign.title} style={{ width: "300px", height: "200px", objectFit: "cover" }} className="img-fluid rounded-4" />
                                     <div className='my-2 text-start' >
-                                        <Title level={5} className='mb-0' style={{ height: "40px", overflow: 'hidden', lineHeight:'1.1', fontSize:'15px' }} >{compaign.title} in {compaign.location}</Title>
+                                        <Title level={5} className='mb-0' style={{ height: "40px", overflow: 'hidden', lineHeight: '1.1', fontSize: '15px' }} >{compaign.title} in {compaign.location}</Title>
                                         <Paragraph >${compaign.amount.toLocaleString()} for {compaign.night} night</Paragraph>
                                     </div>
                                 </div>
